@@ -87,8 +87,8 @@ img {
 
 <body>
 <div class="lang-switch">
-    <a href="index.html">RU</a> | 
-    <a href="index_en.html">EN</a>
+    <a href="index.html" onclick="localStorage.setItem('lang','ru')">RU</a> | 
+    <a href="index_en.html" onclick="localStorage.setItem('lang','en')">EN</a>
 </div>
 <div class="sidebar">
     <a href="img/OIL&GAS PipeLine Engineering System.pdf">📄 Скачать презентацию</a>
@@ -245,6 +245,20 @@ img {
 </div>
 
 </div>
+<script>
+// если пользователь уже выбирал язык — используем его
+const savedLang = localStorage.getItem("lang");
 
+if (savedLang === "en") {
+    window.location.href = "index_en.html";
+} else if (!savedLang) {
+    // автоопределение языка браузера
+    const userLang = navigator.language || navigator.userLanguage;
+
+    if (userLang.startsWith("en")) {
+        window.location.href = "index_en.html";
+    }
+}
+</script>
 </body>
 </html>
