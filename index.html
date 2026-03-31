@@ -8,6 +8,23 @@
 <meta name="keywords" content="трубопровод, AutoCAD, проектирование, нефтегаз, CAD, нефтепровод, водовод, газопровод">
 
 <style>
+    .lang-switch {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    color: #555;
+    margin-right: 5px;
+}
+
+.lang-switch a:hover {
+    color: #000;
+}
 body {
     font-family: Arial, sans-serif;
     background: #f4f6f8;
@@ -69,7 +86,10 @@ img {
 </head>
 
 <body>
-
+<div class="lang-switch">
+    <a href="index.html">RU</a> | 
+    <a href="index_en.html">EN</a>
+</div>
 <div class="sidebar">
     <a href="img/OIL&GAS PipeLine Engineering System.pdf">📄 Скачать презентацию</a>
     <a href="mailto:pipeCAD@mail.ru">✉ Контакты</a>
